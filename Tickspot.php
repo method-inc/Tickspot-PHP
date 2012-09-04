@@ -124,7 +124,7 @@ class Tickspot {
 			'project_id' => $project_id,
 			'task_id' => $task_id,
 			'open' => $open,
-			'project_billable' => $project_billable
+			'task_billable' => $task_billable
 		);
 		$params += $this->_getAuthParams();
 
@@ -204,7 +204,7 @@ class Tickspot {
 		}
 
 		// fire off a post request
-		return $this->postRequest('tasks', $params, null);
+		return $this->postRequest('entries', $params, null);
 	}
 	
 	/**
